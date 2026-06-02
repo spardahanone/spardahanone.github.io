@@ -9,8 +9,8 @@
 
   <style>
 :root{
-  --bg:#0b0614;
-  --panel:rgba(24,14,42,.78);
+  --bg:#0f081a;
+  --panel:rgba(27,16,47,.82);
   --text:#fff8ff;
   --muted:#d5c8e4;
   --violet:#9b35ff;
@@ -29,9 +29,9 @@ body{
   min-height:100vh;
   font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at 18% 8%, rgba(155,53,255,.14), transparent 34%),
-    radial-gradient(circle at 85% 18%, rgba(255,138,31,.12), transparent 36%),
-    linear-gradient(135deg,#0b0614 0%,#13091f 48%,#0a0612 100%);
+    radial-gradient(circle at 18% 8%, rgba(155,53,255,.16), transparent 34%),
+    radial-gradient(circle at 85% 18%, rgba(255,138,31,.13), transparent 36%),
+    linear-gradient(135deg,#10081a 0%,#170d24 48%,#0d0715 100%);
   color:var(--text);
   overflow-x:hidden;
 }
@@ -73,9 +73,9 @@ a{color:inherit;text-decoration:none}
   background:
     linear-gradient(to bottom,
       rgba(11,6,20,0) 0%,
-      rgba(11,6,20,0) 58%,
-      rgba(11,6,20,.34) 82%,
-      #0b0614 100%
+      rgba(11,6,20,0) 60%,
+      rgba(11,6,20,.28) 82%,
+      #10081a 100%
     );
 }
 
@@ -85,16 +85,35 @@ a{color:inherit;text-decoration:none}
   width:100%;
   max-width:1050px;
   text-align:center;
-  margin-top:150px;
+  margin-top:190px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+h1{display:none}
+
+.tagline{
+  order:1;
+  max-width:900px;
+  margin:0 auto 18px;
+  text-align:center;
+  color:#fff;
+  font-size:clamp(1.15rem,2vw,1.45rem);
+  font-weight:700;
+  line-height:1.55;
+  text-shadow:
+    0 2px 12px rgba(0,0,0,.95),
+    0 0 24px rgba(155,53,255,.5);
 }
 
 .badge{
+  order:2;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   padding:10px 20px;
-  margin-bottom:255px;
-  transform:translateY(-42px);
+  margin-bottom:32px;
   border:1px solid rgba(255,212,108,.7);
   background:rgba(18,8,25,.62);
   border-radius:999px;
@@ -109,27 +128,15 @@ a{color:inherit;text-decoration:none}
   text-shadow:0 0 12px rgba(255,212,108,.65);
 }
 
-h1{display:none}
-
-.tagline{
-  max-width:900px;
-  margin:34px auto 30px;
-  text-align:center;
-  color:#fff;
-  font-size:clamp(1.15rem,2vw,1.45rem);
-  font-weight:700;
-  line-height:1.55;
-  text-shadow:
-    0 2px 12px rgba(0,0,0,.95),
-    0 0 24px rgba(155,53,255,.5);
-}
-
 .hero-actions{
+  order:3;
   display:flex;
   justify-content:center;
   align-items:center;
   gap:18px;
   flex-wrap:wrap;
+  margin-top:18px;
+  transform:translateY(18px);
 }
 
 .btn{
@@ -170,9 +177,9 @@ main{padding-bottom:56px}
   width:min(1120px,calc(100% - 36px));
   margin:34px auto;
   padding:clamp(22px,4vw,38px);
-  border:1px solid rgba(215,124,255,.27);
+  border:1px solid rgba(215,124,255,.28);
   border-radius:30px;
-  background:linear-gradient(135deg,rgba(28,16,49,.92),rgba(14,8,25,.9));
+  background:linear-gradient(135deg,rgba(31,18,54,.94),rgba(18,10,31,.92));
   box-shadow:var(--shadow);
   backdrop-filter:blur(18px);
 }
@@ -227,8 +234,8 @@ p{
   padding:22px 12px;
   border-radius:22px;
   text-align:center;
-  background:rgba(24,12,42,.78);
-  border:1px solid rgba(215,124,255,.32);
+  background:rgba(27,15,48,.82);
+  border:1px solid rgba(215,124,255,.34);
   box-shadow:
     inset 0 0 22px rgba(155,53,255,.1),
     0 0 24px rgba(255,138,31,.15);
@@ -287,8 +294,8 @@ p{
 .tile{
   padding:24px;
   border-radius:26px;
-  background:rgba(255,255,255,.075);
-  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.085);
+  border:1px solid rgba(255,255,255,.16);
   min-height:190px;
   position:relative;
   overflow:hidden;
@@ -301,11 +308,11 @@ p{
   width:180px;
   height:180px;
   border-radius:50%;
-  background:rgba(155,53,255,.2);
+  background:rgba(155,53,255,.22);
   filter:blur(8px);
 }
 
-.tile:nth-child(even):before{background:rgba(255,138,31,.2)}
+.tile:nth-child(even):before{background:rgba(255,138,31,.22)}
 
 .tile-icon{
   font-size:2.1rem;
@@ -345,8 +352,8 @@ h3{
   gap:10px;
   padding:13px 16px;
   border-radius:18px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.16);
   font-weight:900;
   transition:.2s ease;
   min-width:142px;
@@ -393,20 +400,26 @@ footer{
   }
 
   .hero-content{
-    margin-top:110px;
-  }
-
-  .badge{
-    margin-bottom:165px;
-    transform:translateY(-28px);
-    font-size:.68rem;
-    letter-spacing:.12em;
+    margin-top:155px;
   }
 
   .tagline{
-    margin-top:26px;
+    order:1;
     font-size:1rem;
     max-width:92%;
+    margin-bottom:14px;
+  }
+
+  .badge{
+    order:2;
+    font-size:.68rem;
+    letter-spacing:.12em;
+    margin-bottom:24px;
+  }
+
+  .hero-actions{
+    order:3;
+    transform:translateY(14px);
   }
 
   .live-card,
@@ -449,11 +462,11 @@ footer{
       <div class="hero-gradient"></div>
 
       <div class="hero-content">
-        <div class="badge">TCG • Gaming • Anime • Food</div>
-
         <p class="tagline">
           Magic, Riftbound, jeux vidéo, Bleach, Japon et ouvertures de boosters.
         </p>
+
+        <div class="badge">TCG • Gaming • Anime • Food</div>
 
         <div class="hero-actions">
           <a class="btn btn-main" href="https://www.twitch.tv/spardahan" target="_blank" rel="noopener">Voir le live</a>
