@@ -43,7 +43,6 @@ a{color:inherit;text-decoration:none}
   display:none;
 }
 
-/* Bannière entière : largeur 100%, hauteur calculée selon l'image */
 .hero{
   position:relative;
   width:100%;
@@ -83,7 +82,7 @@ a{color:inherit;text-decoration:none}
   position:absolute;
   z-index:2;
   left:50%;
-  top:47%;
+  top:48%;
   transform:translate(-50%,-50%);
   width:min(1050px, calc(100% - 40px));
   text-align:center;
@@ -92,30 +91,14 @@ a{color:inherit;text-decoration:none}
   align-items:center;
 }
 
-h1{display:none}
-
-.tagline{
-  order:1;
-  max-width:900px;
-  margin:0 auto 14px;
-  text-align:center;
-  color:#fff;
-  font-size:clamp(1.15rem,2vw,1.45rem);
-  font-weight:700;
-  line-height:1.55;
-  text-shadow:
-    0 2px 12px rgba(0,0,0,.95),
-    0 0 24px rgba(155,53,255,.5);
-}
-
 .badge{
-  order:2;
+  order:1;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:10px 20px;
-  margin-bottom:30px;
-  border:1px solid rgba(255,212,108,.7);
+  padding:10px 22px;
+  margin-bottom:10px;
+  border:1px solid rgba(255,212,108,.75);
   background:rgba(18,8,25,.62);
   border-radius:999px;
   color:var(--gold);
@@ -129,15 +112,40 @@ h1{display:none}
   text-shadow:0 0 12px rgba(255,212,108,.65);
 }
 
-.hero-actions{
+.spardahan-logo{
+  order:2;
+  width:min(720px, 82vw);
+  height:auto;
+  display:block;
+  margin:0 auto 12px;
+  filter:
+    drop-shadow(0 0 18px rgba(155,53,255,.65))
+    drop-shadow(0 0 22px rgba(255,138,31,.35));
+}
+
+.tagline{
   order:3;
+  max-width:900px;
+  margin:0 auto 14px;
+  text-align:center;
+  color:#fff;
+  font-size:clamp(1.15rem,2vw,1.45rem);
+  font-weight:700;
+  line-height:1.55;
+  text-shadow:
+    0 2px 12px rgba(0,0,0,.95),
+    0 0 24px rgba(155,53,255,.5);
+}
+
+.hero-actions{
+  order:4;
   display:flex;
   justify-content:center;
   align-items:center;
   gap:18px;
   flex-wrap:wrap;
-  margin-top:18px;
-  transform:translateY(34px);
+  margin-top:10px;
+  transform:translateY(22px);
 }
 
 .btn{
@@ -207,6 +215,8 @@ main{padding-bottom:56px}
   text-transform:uppercase;
   font-size:.78rem;
 }
+
+h1{display:none}
 
 h2{
   font-size:clamp(2rem,5vw,4rem);
@@ -407,24 +417,29 @@ footer{
     width:calc(100% - 24px);
   }
 
-  .tagline{
-    font-size:.72rem;
-    max-width:92%;
-    margin-bottom:8px;
-    line-height:1.35;
+  .badge{
+    font-size:.5rem;
+    letter-spacing:.08em;
+    padding:6px 11px;
+    margin-bottom:3px;
   }
 
-  .badge{
-    font-size:.52rem;
-    letter-spacing:.08em;
-    padding:7px 12px;
-    margin-bottom:12px;
+  .spardahan-logo{
+    width:76vw;
+    margin-bottom:3px;
+  }
+
+  .tagline{
+    font-size:.68rem;
+    max-width:92%;
+    margin-bottom:4px;
+    line-height:1.28;
   }
 
   .hero-actions{
     gap:8px;
-    margin-top:4px;
-    transform:translateY(12px);
+    margin-top:2px;
+    transform:translateY(8px);
   }
 
   .btn{
@@ -473,11 +488,13 @@ footer{
       <div class="hero-gradient"></div>
 
       <div class="hero-content">
+        <div class="badge">TCG • Gaming • Anime • Food</div>
+
+        <img class="spardahan-logo" src="assets/spardahan-logo.png" alt="Spardahan">
+
         <p class="tagline">
           Magic, Riftbound, jeux vidéo, Bleach, Japon et ouvertures de boosters.
         </p>
-
-        <div class="badge">TCG • Gaming • Anime • Food</div>
 
         <div class="hero-actions">
           <a class="btn btn-main" href="https://www.twitch.tv/spardahan" target="_blank" rel="noopener">Voir le live</a>
@@ -616,4 +633,3 @@ footer{
   </script>
 </body>
 </html>
-
